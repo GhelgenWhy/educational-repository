@@ -1,8 +1,4 @@
-cd .\educational-repository\L2_7\Node.js\
-npm i axios
-
-```
-const axios = require("axios")
+const axios = require("axios");
 async function fetchUserData() {
   try {
     console.log("sending request...");
@@ -26,10 +22,3 @@ async function fetchUserData() {
   }
 }
 fetchUserData();
-
-```
-
-    "axios": "^1.13.6"
-
-node .\index.js
-npm i
