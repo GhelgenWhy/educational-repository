@@ -1,5 +1,8 @@
-/L2_7/Python/venv
-/L2_7/Node.js/node_modules
+venv/
+node_modules/
+.black
+.flake8
+
 
 *.o
 *.exe

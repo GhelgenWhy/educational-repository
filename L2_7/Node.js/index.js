@@ -3,7 +3,7 @@ async function fetchUserData() {
   try {
     console.log("sending request...");
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users/1",
+      "https://jsonplaceholder.typicode.com/users/7",
     );
     console.log("\ndata received");
     console.log(`name: ${response.data.name}`);
