@@ -1,0 +1,6 @@
+services:
+  lab3:
+    build: .
+    container_name: Hotel_app
+    stdin_open: true
+    tty: true

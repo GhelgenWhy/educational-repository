@@ -1,2 +1,5 @@
 /L2_7/Python/venv
 /L2_7/Node.js/node_modules
+
+*.o
+*.exe
