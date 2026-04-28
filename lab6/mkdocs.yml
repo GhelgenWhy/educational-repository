@@ -1,6 +1,7 @@
 site_name: Documentation
 site_description: Documentation for the educational-repository project
 site_author: Andrey Demchenko
+site_url: https://ghelgenwhy.github.io/educational-repository/
 theme:
   name: readthedocs
   highlightjs: true
