@@ -7,3 +7,10 @@ site/
 
 *.o
 *.exe
+
+__pycache__/
+*.py[cod]
+*$py.class
+ENV/
+.pytest_cache/
+.coverage

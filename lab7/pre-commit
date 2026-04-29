@@ -1,0 +1,47 @@
+#!/bin/bash
+
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+
+if [ -z "$FILES" ]; then
+    exit 0
+fi
+
+echo "found python files: $FILES"
+
+echo "Black formatting..."
+
+if ! command -v black &> /dev/null
+then
+    echo "Black not found. Please install it. pip install black"
+    exit 1
+fi
+
+black --check $FILES
+
+if [ $? -ne 0 ]; then
+    echo "error: Black formatting failed."
+    exit 1
+fi
+
+echo "Black formatting passed."
+
+echo "Pylint formatting..."
+
+if ! command -v pylint &> /dev/null
+then
+    echo "Pylint not found. Please install it. pip install pylint"
+    exit 1
+fi
+
+pylint $FILES
+
+if [ $? -ne 0 ]; then
+    echo "error: Pylint formatting failed."
+    exit 1
+fi
+
+echo "Pylint formatting passed."
+
+echo "All formatting passed."
+
+exit 0
